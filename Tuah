@@ -1,0 +1,17 @@
+-- Define the function that will run every 0.1 seconds
+while true do
+    -- First action: fire the first event
+    local args1 = {
+        [1] = workspace:FindFirstChild("\195\133iWhaIeRobIox").Head
+    }
+    game:GetService("ReplicatedStorage").b:FireServer(unpack(args1))
+    
+    -- Second action: fire the second event
+    local args2 = {
+        [1] = workspace:FindFirstChild("\195\133iWhaIeRobIox"):FindFirstChild("Right Arm")
+    }
+    game:GetService("ReplicatedStorage").b:FireServer(unpack(args2))
+    
+    -- Wait for 0.1 seconds before repeating
+    wait(0.01)
+end
